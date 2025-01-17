@@ -2,19 +2,280 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global Styles */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url('/background.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+section {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+/* Navbar Styles */
+nav {
+  background: transparent;
+  color: black;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 1rem 2rem;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo img {
+  height: 40px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #2563eb;
+}
+
+/* Hero Section (Consult a Doctor) */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 600px;
+  margin: 2rem auto; /* Center horizontally */
+  padding: 2rem 1rem;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Buttons for Hero Section */
+.btn-primary {
+  background-color: #6b46c1;
+  color: white;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  margin-right: 1rem;
+}
+
+.btn-primary:hover {
+  background-color: #5a3ea0;
+}
+
+.btn-secondary {
+  background-color: #e2e8f0;
+  color: #6b46c1;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #6b46c1;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #6b46c1;
+  color: white;
+}
+
+/* Welcome Section */
+.welcome-section {
+  background-color: white;
+  padding: 3rem 2rem;
+  margin: 0; /* Remove margins to span full width */
+  border-radius: 0; /* Remove border radius for full-width appearance */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Ensure full width */
+}
+
+.welcome-section h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.welcome-section h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.welcome-section p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 1rem;
+}
+
+.welcome-section a {
+  font-size: 1rem;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.welcome-section a:hover {
+  text-decoration: underline;
+}
+
+/* Features Section */
+/* Features Section */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Ensure 4 columns */
+  gap: 1rem;
+}
+
+/* Glassy Box Styles */
+.feature-box {
+  background: rgba(255, 255, 255, 0.1); /* Slightly transparent white */
+  backdrop-filter: blur(10px); /* Blur effect */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for definition */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 2rem; /* Space inside the box */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation on hover */
+}
+
+.feature-box:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.feature-box img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1rem; /* Spacing below image */
+}
+
+.feature-box h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333; /* Dark text */
+  margin-bottom: 0.5rem;
+}
+
+.feature-box p {
+  font-size: 1rem;
+  color: #555; /* Lighter text */
+  margin: 0;
+  text-align: center;
+}
+
+
+/* Footer Styles */
+footer {
+  background: #1e293b;
+  color: #cbd5e1;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left; /* Align text to the left for each column */
+}
+
+footer h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  margin: 0.5rem 0;
+}
+
+footer ul li a {
+  color: #93c5fd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: #60a5fa;
+}
+
+footer p {
+  margin: 0.5rem 0;
+  font-size: 0.875rem;
+}
+
+footer .bottom {
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  color: #94a3b8;
+  text-align: center;
 }
 
 
 
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 1rem;
+  }
+
+  .welcome-section {
+    padding: 2rem 1rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    margin-right: 0;
+  }
+}

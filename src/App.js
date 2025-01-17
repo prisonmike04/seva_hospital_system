@@ -19,7 +19,6 @@ import DoctorRoutes from './routes/DoctorRoutes';
 import EmployeeRoutes from './routes/EmployeeRoutes';
 import AdminRoutes from './routes/AdminRoutes';
 
-
 function App() {
   return (
     <div className="min-h-screen bg-gray-100">
@@ -48,6 +47,5 @@ function App() {
     </div>
   );
 }
-
 
 export default App;
