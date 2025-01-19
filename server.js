@@ -18,8 +18,8 @@ const app = express();
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root', // Replace with your MySQL username
-    password: 'Aayu0306', // Replace with your MySQL password
-    database: 'seva_hospital_db' // Replace with your database name
+    password: 'Jay22oct', // Replace with your MySQL password
+    database: 'hospitalmanagementsystem' // Replace with your database name
 });
 
 // Connect to MySQL
